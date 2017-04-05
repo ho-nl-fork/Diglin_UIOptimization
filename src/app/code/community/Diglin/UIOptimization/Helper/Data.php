@@ -44,6 +44,9 @@ class Diglin_UIOptimization_Helper_Data extends Mage_Core_Helper_Abstract
         }
         $suffixFilename = (Mage::app()->getStore()->isCurrentlySecure())?'-ssl':'';
         $suffixFilename.= '_'.Mage::app()->getStore()->getId();
+        if (Mage::getStoreConfig('uioptimization/csscompression/timestamp')) {
+            $suffixFilename.= '_'.filemtime($info['orgskin_path']);
+        }
         $name = substr ( $name, 0, strpos($name, '.' . $type) );
         $name = $name . $suffixFilename .'_cp.'.$type;
 
