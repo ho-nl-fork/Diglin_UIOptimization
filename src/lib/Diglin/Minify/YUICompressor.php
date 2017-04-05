@@ -57,7 +57,7 @@ class Diglin_Minify_YUICompressor {
      * @param string $js
      * 
      * @param array $options (verbose is ignored)
-     * 
+     * x
      * @see http://www.julienlecomte.net/yuicompressor/README
      * 
      * @return string 
@@ -90,9 +90,16 @@ class Diglin_Minify_YUICompressor {
             throw new Exception('Minify_YUICompressor : could not create temp file.');
         }
         file_put_contents($tmpFile, $content);
-        exec(self::_getCmd($options, $type, $tmpFile), $output);
+        exec(self::_getCmd($options, $type, $tmpFile), $output, $err);
+
+        if ($err) {
+            Mage::log(sprintf('Could not compress, skipping: %s', $content));
+            $output = $content;
+        } else {
+            $output = implode("\n", $output);
+        }
         unlink($tmpFile);
-        return implode("\n", $output);
+        return $output;
     }
     
     private static function _getCmd($userOptions, $type, $tmpFile)
