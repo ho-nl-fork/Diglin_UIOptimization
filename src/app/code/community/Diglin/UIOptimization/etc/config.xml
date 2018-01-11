@@ -72,6 +72,7 @@
                     <html_head>Diglin_UIOptimization_Block_Optimize_Head</html_head>
                 </rewrite>
             </page>
+
         </blocks>
         <models>
             <uioptimization>

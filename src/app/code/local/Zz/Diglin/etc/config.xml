@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Zz_Diglin>
+            <version>0.1.0</version>
+        </Zz_Diglin>
+    </modules>
+    <global>
+        <blocks>
+            <page>
+                <rewrite>
+                    <html_head>Diglin_UIOptimization_Block_Optimize_Head</html_head>
+                </rewrite>
+            </page>
+        </blocks>
+    </global>
+</config>

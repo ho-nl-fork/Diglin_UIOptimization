@@ -4,3 +4,5 @@ src/app/design/frontend/base/default/template/uioptimization    app/design/front
 src/app/etc/modules/Diglin_UIOptimization.xml                   app/etc/modules/Diglin_UIOptimization.xml
 src/lib/*                                                       lib/
 src/skin/frontend/base/default/css/w3c-validator.css            skin/frontend/base/default/css/w3c-validator.css
+src/app/code/local/Zz/Diglin                                    app/code/local/Zz/Diglin
+src/app/etc/modules/Zz_Diglin.xml                               app/etc/modules/Zz_Diglin.xml

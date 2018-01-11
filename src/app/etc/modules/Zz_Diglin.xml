@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Zz_Diglin>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Zz_Diglin>
+    </modules>
+</config>

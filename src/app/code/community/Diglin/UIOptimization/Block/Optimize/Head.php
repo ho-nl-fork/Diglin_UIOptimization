@@ -15,7 +15,16 @@
  * @copyright   Copyright (c) 2011-2013 Diglin (http://www.diglin.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
-class Diglin_UIOptimization_Block_Optimize_Head extends Mage_Page_Block_Html_Head 
+
+if (Mage::helper('core')->isModuleEnabled('WBL_Minify')) {
+    class Diglin_UIOptimization_Block_Optimize_HeadExtend extends WBL_Minify_Block_Page_Html_Head {};
+}
+else {
+    class Diglin_UIOptimization_Block_Optimize_HeadExtend extends Mage_Page_Block_Html_Head {};
+}
+
+
+class Diglin_UIOptimization_Block_Optimize_Head extends Diglin_UIOptimization_Block_Optimize_HeadExtend
 {
     /**
      * Merge static and skin files of the same format into a set of HEAD directives or even into a directive
